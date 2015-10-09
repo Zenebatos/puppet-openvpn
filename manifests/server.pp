@@ -437,10 +437,11 @@ define openvpn::server(
   $ns_cert_type              = true,
   $nobind                    = false,
   $custom_options            = {},
-  $override_cert             = false,
-  $cert_path                 = '',
-  $override_key              = false,
-  $key_path                  = '',
+  $custom_cert               = false,
+  $ccert                     = undef,
+  $ckey                      = undef,
+  $cca                       = undef,
+  $cdh                       = undef,
 ) {
 
   include openvpn
