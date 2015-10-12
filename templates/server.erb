@@ -13,12 +13,12 @@ remote <%= rem %>
 server-poll-timeout <%= @server_poll_timeout %>
 <% end -%>
 <% end -%>
-<% if @custom_cert %>
-ca <%= @cca  %>
-cert <%= @ccert  %>
-key <%= @ckey  %>
-dh <%= @cdh  %>
-<% else %>
+<% if @custom_cert -%>
+ca <%= @cca %>
+cert <%= @ccert %>
+key <%= @ckey %>
+dh <%= @cdh %>
+<% else -%>
 ca /etc/openvpn/<%= @ca_name %>/keys/ca.crt
 cert /etc/openvpn/<%= @ca_name %>/keys/<%= @ca_common_name %>.crt
 key /etc/openvpn/<%= @ca_name %>/keys/<%= @ca_common_name %>.key
